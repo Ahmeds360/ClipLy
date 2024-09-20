@@ -240,7 +240,16 @@ class VideoProcessorThread(QThread):
                 "FFprobe not found. Please ensure it's installed and in your PATH."
             )
 
-        command = [ffprobe_path, '-v', 'error', '-show_entries', 'format=duration', '-of', 'json', video]
+        command = [
+            ffprobe_path,
+            "-v",
+            "error",
+            "-show_entries",
+            "format=duration",
+            "-of",
+            "json",
+            video,
+        ]
         result = subprocess.run(command, capture_output=True, text=True)
         
         if result.returncode != 0:
