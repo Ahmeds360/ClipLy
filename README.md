@@ -1,6 +1,6 @@
 # ClipLy
 
-![ClipLy Logo](https://github.com/Ahmeds360/ClipLy/blob/main/logo.png?raw=true)
+<img src="https://github.com/Ahmeds360/ClipLy/blob/main/logo.png?raw=true" alt="ClipLy Logo" width="100" height="100">
 
 ClipLy is a powerful and user-friendly video processing tool built with Python and PyQt5. It allows users to easily trim, compress, and process multiple videos with GPU acceleration.
 
