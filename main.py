@@ -179,15 +179,9 @@ class VideoProcessorThread(QThread):
 
         except subprocess.CalledProcessError:
             print("CUDA acceleration failed. Falling back to CPU encoding.")
-            
-            # CPU fallback command setup
-            cpu_command = [
-                ffmpeg_path,
-                '-i', video,
-                '-progress', 'pipe:1',
-                '-nostats'
-            ]
-            
+
+            cpu_command = [ffmpeg_path, "-i", video, "-progress", "pipe:1", "-nostats"]
+
             if trim:
                 cpu_command.extend(['-ss', str(start), '-t', str(duration)])
             
