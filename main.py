@@ -414,7 +414,8 @@ class VideoProcessor(QWidget):
         layout.addLayout(options_layout)
 
         self.process_button = QPushButton("Process Videos")
-        self.process_button.setStyleSheet("""
+        self.process_button.setStyleSheet(
+            """
             QPushButton {
                 background-color: #4CAF50;
                 color: white;
