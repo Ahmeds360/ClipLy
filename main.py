@@ -352,7 +352,8 @@ class VideoProcessor(QWidget):
         layout.addWidget(self.drag_drop_box)
 
         self.video_list = QListWidget()
-        self.video_list.setStyleSheet("""
+        self.video_list.setStyleSheet(
+            """
             QListWidget {
                 border: 1px solid #ccc;
                 border-radius: 5px;
