@@ -131,17 +131,27 @@ class VideoProcessorThread(QThread):
                 ]
             )
         else:
-            cuda_command.extend([
-                '-c:v', 'h264_nvenc',
-                '-preset', 'p2',
-                '-tune', 'hq',
-                '-cq', '15',
-                '-b:v', '0',
-                '-maxrate', '130M',
-                '-bufsize', '260M',
-                '-c:a', 'copy'
-            ])
-        
+            cuda_command.extend(
+                [
+                    "-c:v",
+                    "h264_nvenc",
+                    "-preset",
+                    "p2",
+                    "-tune",
+                    "hq",
+                    "-cq",
+                    "15",
+                    "-b:v",
+                    "0",
+                    "-maxrate",
+                    "130M",
+                    "-bufsize",
+                    "260M",
+                    "-c:a",
+                    "copy",
+                ]
+            )
+
         cuda_command.append(output)
         
         try:
