@@ -176,7 +176,7 @@ class VideoProcessorThread(QThread):
             process.wait()
             if process.returncode != 0:
                 raise subprocess.CalledProcessError(process.returncode, cuda_command)
-        
+
         except subprocess.CalledProcessError:
             print("CUDA acceleration failed. Falling back to CPU encoding.")
             
