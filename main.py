@@ -394,7 +394,8 @@ class VideoProcessor(QWidget):
         options_layout.addWidget(self.compress_checkbox)
 
         self.trim_button = QPushButton("Trim Selected Video")
-        self.trim_button.setStyleSheet("""
+        self.trim_button.setStyleSheet(
+            """
             QPushButton {
                 background-color: #2196F3;
                 color: white;
