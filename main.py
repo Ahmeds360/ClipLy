@@ -3,8 +3,23 @@ import os
 import subprocess
 import json
 import re
-from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QHBoxLayout, QPushButton, QLabel, QFileDialog, QListWidget, QCheckBox, QSlider, QDialog, QStyle, QMessageBox, QProgressBar
-from PyQt5.QtCore import Qt, QMimeData, QThread, pyqtSignal
+from PyQt5.QtWidgets import (
+    QApplication,
+    QWidget,
+    QVBoxLayout,
+    QHBoxLayout,
+    QPushButton,
+    QLabel,
+    QFileDialog,
+    QListWidget,
+    QCheckBox,
+    QSlider,
+    QDialog,
+    QStyle,
+    QMessageBox,
+    QProgressBar,
+)
+from PyQt5.QtCore import Qt, QThread, pyqtSignal
 from PyQt5.QtGui import QDragEnterEvent, QDropEvent
 
 def get_ffmpeg_path():
