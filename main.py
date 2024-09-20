@@ -440,7 +440,8 @@ class VideoProcessor(QWidget):
         self.setLayout(layout)
         self.setWindowTitle("ClipLy")
         self.setGeometry(100, 100, 800, 900)
-        self.setStyleSheet("""
+        self.setStyleSheet(
+            """
             QWidget {
                 background-color: #f5f5f5;
                 font-family: Arial, sans-serif;
