@@ -534,7 +534,7 @@ class TrimDialog(QDialog):
         layout.addLayout(buttons_layout)
 
         self.setLayout(layout)
-        self.setWindowTitle(f'Trim {os.path.basename(self.video)}')
+        self.setWindowTitle(f"Trim {os.path.basename(self.video)}")
         self.setGeometry(200, 200, 600, 200)
 
     def create_slider(self, name):
