@@ -206,9 +206,14 @@ class VideoProcessorThread(QThread):
                 )
 
             cpu_command.append(output)
-            
-            process = subprocess.Popen(cpu_command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, universal_newlines=True)
-            
+
+            process = subprocess.Popen(
+                cpu_command,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.STDOUT,
+                universal_newlines=True,
+            )
+
             last_progress = 0
             for line in process.stdout:
                 progress = self.parse_progress(line, duration)
