@@ -172,7 +172,7 @@ class VideoProcessorThread(QThread):
                     if progress > last_progress:
                         self.progress.emit(progress)
                         last_progress = progress
-            
+
             process.wait()
             if process.returncode != 0:
                 raise subprocess.CalledProcessError(process.returncode, cuda_command)
