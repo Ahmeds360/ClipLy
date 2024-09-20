@@ -259,7 +259,7 @@ class VideoProcessorThread(QThread):
         return float(output["format"]["duration"])
 
     def parse_progress(self, line, duration):
-        time_match = re.search(r'out_time_ms=(\d+)', line)
+        time_match = re.search(r"out_time_ms=(\d+)", line)
         if time_match:
             time_ms = int(time_match.group(1))
             progress = (time_ms / 1000000) / duration * 100
