@@ -80,9 +80,10 @@ class VideoProcessorThread(QThread):
 
         ffmpeg_path = find_executable("ffmpeg.exe")
         if not ffmpeg_path:
-            raise FileNotFoundError("FFmpeg not found. Please ensure it's installed and in your PATH.")
-        
-        # CUDA command setup
+            raise FileNotFoundError(
+                "FFmpeg not found. Please ensure it's installed and in your PATH."
+            )
+
         cuda_command = [
             ffmpeg_path,
             '-hwaccel', 'cuda',
