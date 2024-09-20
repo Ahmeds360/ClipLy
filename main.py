@@ -554,7 +554,7 @@ class TrimDialog(QDialog):
         container_layout.addWidget(label)
         container_layout.addWidget(slider)
         container.setLayout(container_layout)
-        
+
         return container
 
     def format_time(self, value):
