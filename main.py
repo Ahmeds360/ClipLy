@@ -587,7 +587,7 @@ class TrimDialog(QDialog):
                 raise RuntimeError(f"FFprobe failed: {result.stderr}")
 
             output = json.loads(result.stdout)
-            duration = float(output['format']['duration'])
+            duration = float(output["format"]["duration"])
             return duration
         except Exception as e:
             print(f"Error getting video duration: {str(e)}")
