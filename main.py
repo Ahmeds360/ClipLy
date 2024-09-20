@@ -35,8 +35,7 @@ def find_executable(name):
     path = os.path.join(get_ffmpeg_path(), name)
     if os.path.exists(path):
         return path
-    
-    # Check in the same directory as the script/executable
+
     path = os.path.join(os.path.dirname(sys.executable), name)
     if os.path.exists(path):
         return path
