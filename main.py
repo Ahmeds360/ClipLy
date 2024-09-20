@@ -427,7 +427,8 @@ class VideoProcessor(QWidget):
             QPushButton:hover {
                 background-color: #45a049;
             }
-        """)
+        """
+        )
         self.process_button.clicked.connect(self.process_videos)
         layout.addWidget(self.process_button)
 
