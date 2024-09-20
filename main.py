@@ -105,8 +105,8 @@ class VideoProcessorThread(QThread):
             start = trim["start"]
             end = trim["end"]
             duration = end - start
-            cuda_command.extend(['-ss', str(start), '-t', str(duration)])
-        
+            cuda_command.extend(["-ss", str(start), "-t", str(duration)])
+
         if compress:
             cuda_command.extend([
                 '-c:v', 'h264_nvenc',
