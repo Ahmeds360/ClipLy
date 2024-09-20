@@ -67,7 +67,6 @@ class VideoProcessorThread(QThread):
                     video, self.compress, self.trim_values.get(video, None)
                 )
                 self.progress.emit(100)
-                # If it's not the last video, reset progress for the next video
                 if index < total_videos - 1:
                     self.progress.emit(0)
             except Exception as e:
@@ -167,7 +166,6 @@ class VideoProcessorThread(QThread):
             for line in process.stdout:
                 progress = self.parse_progress(line, duration)
                 if progress is not None:
-                    # Limit progress to 99% to leave room for final processing
                     progress = min(progress, 99)
                     if progress > last_progress:
                         self.progress.emit(progress)
@@ -218,7 +216,6 @@ class VideoProcessorThread(QThread):
             for line in process.stdout:
                 progress = self.parse_progress(line, duration)
                 if progress is not None:
-                    # Limit progress to 99% to leave room for final processing
                     progress = min(progress, 99)
                     if progress > last_progress:
                         self.progress.emit(progress)
@@ -230,7 +227,6 @@ class VideoProcessorThread(QThread):
                     f"FFmpeg command failed with return code {process.returncode}"
                 )
 
-        # Ensure progress reaches 100% after processing is complete
         self.progress.emit(100)
 
     def get_video_duration(self, video):
