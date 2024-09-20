@@ -613,7 +613,8 @@ def get_trim_values(self):
         "end": end_value / 100 * self.video_length,
     }
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     app = QApplication(sys.argv)
     ex = VideoProcessor()
     ex.show()
