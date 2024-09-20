@@ -44,7 +44,7 @@ def find_executable(name):
         exe_file = os.path.join(path, name)
         if os.path.isfile(exe_file):
             return exe_file
-    
+
     return None
 
 class VideoProcessorThread(QThread):
