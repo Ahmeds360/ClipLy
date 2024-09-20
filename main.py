@@ -594,7 +594,7 @@ class TrimDialog(QDialog):
             print(f"Current working directory: {os.getcwd()}")
             print(f"FFprobe path attempted: {ffprobe_path}")
             print(f"Video file: {self.video}")
-            return 300  # Default to 5 minutes if there's an error
+            return 300
 
     def get_trim_values(self):
         start_value = self.start_slider.findChild(QSlider).value()
