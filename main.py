@@ -77,8 +77,8 @@ class VideoProcessorThread(QThread):
 
     def process_video(self, video, compress, trim):
         output = os.path.splitext(video)[0] + "_processed.mp4"
-        
-        ffmpeg_path = find_executable('ffmpeg.exe')
+
+        ffmpeg_path = find_executable("ffmpeg.exe")
         if not ffmpeg_path:
             raise FileNotFoundError("FFmpeg not found. Please ensure it's installed and in your PATH.")
         
