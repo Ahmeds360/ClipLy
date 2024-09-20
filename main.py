@@ -108,17 +108,28 @@ class VideoProcessorThread(QThread):
             cuda_command.extend(["-ss", str(start), "-t", str(duration)])
 
         if compress:
-            cuda_command.extend([
-                '-c:v', 'h264_nvenc',
-                '-preset', 'p2',
-                '-tune', 'hq',
-                '-cq', '28',
-                '-b:v', '0',
-                '-maxrate', '10M',
-                '-bufsize', '20M',
-                '-c:a', 'aac',
-                '-b:a', '96k'
-            ])
+            cuda_command.extend(
+                [
+                    "-c:v",
+                    "h264_nvenc",
+                    "-preset",
+                    "p2",
+                    "-tune",
+                    "hq",
+                    "-cq",
+                    "28",
+                    "-b:v",
+                    "0",
+                    "-maxrate",
+                    "10M",
+                    "-bufsize",
+                    "20M",
+                    "-c:a",
+                    "aac",
+                    "-b:a",
+                    "96k",
+                ]
+            )
         else:
             cuda_command.extend([
                 '-c:v', 'h264_nvenc',
