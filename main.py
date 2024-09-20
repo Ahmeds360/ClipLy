@@ -314,7 +314,8 @@ class DragDropBox(QLabel):
                 background-color: #f0f0f0;
                 font-size: 18px;
             }
-        """)
+        """
+        )
         self.setAcceptDrops(True)
         self.setMinimumHeight(200)
 
