@@ -201,13 +201,10 @@ class VideoProcessorThread(QThread):
                     ]
                 )
             else:
-                cpu_command.extend([
-                    '-c:v', 'libx264',
-                    '-preset', 'slow',
-                    '-crf', '18',
-                    '-c:a', 'copy'
-                ])
-            
+                cpu_command.extend(
+                    ["-c:v", "libx264", "-preset", "slow", "-crf", "18", "-c:a", "copy"]
+                )
+
             cpu_command.append(output)
             
             process = subprocess.Popen(cpu_command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, universal_newlines=True)
