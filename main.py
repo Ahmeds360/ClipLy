@@ -269,7 +269,9 @@ class VideoProcessorThread(QThread):
     def get_video_duration(self, video):
         ffprobe_path = find_executable("ffprobe.exe")
         if not ffprobe_path:
-            raise FileNotFoundError("FFprobe not found. Please ensure it's installed and in your PATH.")
+            raise FileNotFoundError(
+                "FFprobe not found. Please ensure it's installed and in your PATH."
+            )
 
         command = [ffprobe_path, '-v', 'error', '-show_entries', 'format=duration', '-of', 'json', video]
         result = subprocess.run(command, capture_output=True, text=True)
