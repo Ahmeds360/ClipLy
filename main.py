@@ -339,6 +339,7 @@ class DragDropBox(QLabel):
         if files:
             self.parent().add_videos(files)
 
+
 class VideoProcessor(QWidget):
     def __init__(self):
         super().__init__()
