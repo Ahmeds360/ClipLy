@@ -600,8 +600,8 @@ class TrimDialog(QDialog):
         start_value = self.start_slider.findChild(QSlider).value()
         end_value = self.end_slider.findChild(QSlider).value()
         return {
-            'start': start_value / 100 * self.video_length,
-            'end': end_value / 100 * self.video_length
+            "start": start_value / 100 * self.video_length,
+            "end": end_value / 100 * self.video_length,
         }
 
 def get_trim_values(self):
