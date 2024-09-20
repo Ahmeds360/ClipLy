@@ -22,6 +22,7 @@ from PyQt5.QtWidgets import (
 from PyQt5.QtCore import Qt, QThread, pyqtSignal
 from PyQt5.QtGui import QDragEnterEvent, QDropEvent
 
+
 def get_ffmpeg_path():
     if getattr(sys, 'frozen', False):
         application_path = sys._MEIPASS
