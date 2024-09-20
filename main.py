@@ -183,8 +183,8 @@ class VideoProcessorThread(QThread):
             cpu_command = [ffmpeg_path, "-i", video, "-progress", "pipe:1", "-nostats"]
 
             if trim:
-                cpu_command.extend(['-ss', str(start), '-t', str(duration)])
-            
+                cpu_command.extend(["-ss", str(start), "-t", str(duration)])
+
             if compress:
                 cpu_command.extend(
                     [
