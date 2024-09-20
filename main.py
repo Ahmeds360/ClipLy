@@ -47,6 +47,7 @@ def find_executable(name):
 
     return None
 
+
 class VideoProcessorThread(QThread):
     finished = pyqtSignal()
     error = pyqtSignal(str)
