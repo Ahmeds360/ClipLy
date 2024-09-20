@@ -325,7 +325,11 @@ class DragDropBox(QLabel):
 
     def dropEvent(self, event: QDropEvent):
         urls = event.mimeData().urls()
-        files = [url.toLocalFile() for url in urls if url.toLocalFile().endswith(('.mp4', '.avi', '.mov'))]
+        files = [
+            url.toLocalFile()
+            for url in urls
+            if url.toLocalFile().endswith((".mp4", ".avi", ".mov"))
+        ]
         self.parent().add_videos(files)
 
     def mousePressEvent(self, event):
