@@ -453,7 +453,9 @@ class VideoProcessor(QWidget):
 
     def add_videos(self, files):
         for file in files:
-            if file not in [self.video_list.item(i).text() for i in range(self.video_list.count())]:
+            if file not in [
+                self.video_list.item(i).text() for i in range(self.video_list.count())
+            ]:
                 self.video_list.addItem(file)
 
     def show_trim_dialog(self):
