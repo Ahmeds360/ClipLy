@@ -24,7 +24,7 @@ from PyQt5.QtGui import QDragEnterEvent, QDropEvent
 
 
 def get_ffmpeg_path():
-    if getattr(sys, 'frozen', False):
+    if getattr(sys, "frozen", False):
         application_path = sys._MEIPASS
     else:
         application_path = os.path.dirname(os.path.abspath(__file__))
