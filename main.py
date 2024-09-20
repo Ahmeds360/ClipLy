@@ -39,8 +39,7 @@ def find_executable(name):
     path = os.path.join(os.path.dirname(sys.executable), name)
     if os.path.exists(path):
         return path
-    
-    # Check in PATH
+
     for path in os.environ["PATH"].split(os.pathsep):
         exe_file = os.path.join(path, name)
         if os.path.isfile(exe_file):
