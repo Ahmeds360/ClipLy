@@ -499,7 +499,12 @@ class VideoProcessor(QWidget):
     def on_processing_error(self, error_message):
         self.process_button.setEnabled(True)
         self.process_button.setText("Process Videos")
-        QMessageBox.critical(self, "Processing Error", f"An error occurred during processing:\n\n{error_message}")
+        QMessageBox.critical(
+            self,
+            "Processing Error",
+            f"An error occurred during processing:\n\n{error_message}",
+        )
+
 
 class TrimDialog(QDialog):
     def __init__(self, video, parent=None):
