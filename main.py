@@ -366,7 +366,8 @@ class VideoProcessor(QWidget):
             QListWidget::item:selected {
                 background-color: #e0e0e0;
             }
-        """)
+        """
+        )
         layout.addWidget(self.video_list)
 
         options_layout = QHBoxLayout()
