@@ -1,1 +1,0 @@
-python -m nuitka --standalone --follow-imports --enable-plugin=pyqt5 --windows-console-mode=disable --onefile --include-data-file=C:\ffmpeg\bin\ffmpeg.exe=ffmpeg.exe --include-data-file=C:\ffmpeg\bin\ffprobe.exe=ffprobe.exe --assume-yes-for-downloads --mingw64 --windows-icon-from-ico=logo.ico --output-filename=ClipLy.exe --show-progress --show-memory --jobs=14 main.py
