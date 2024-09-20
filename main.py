@@ -305,7 +305,8 @@ class DragDropBox(QLabel):
         super().__init__()
         self.setAlignment(Qt.AlignCenter)
         self.setText("Drag and drop videos here\nor click to select")
-        self.setStyleSheet("""
+        self.setStyleSheet(
+            """
             QLabel {
                 border: 2px dashed #aaa;
                 border-radius: 10px;
