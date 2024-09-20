@@ -299,6 +299,7 @@ class VideoProcessorThread(QThread):
             return min(progress, 100)
         return None
 
+
 class DragDropBox(QLabel):
     def __init__(self):
         super().__init__()
