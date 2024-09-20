@@ -186,13 +186,20 @@ class VideoProcessorThread(QThread):
                 cpu_command.extend(['-ss', str(start), '-t', str(duration)])
             
             if compress:
-                cpu_command.extend([
-                    '-c:v', 'libx264',
-                    '-preset', 'medium',
-                    '-crf', '23',
-                    '-c:a', 'aac',
-                    '-b:a', '128k'
-                ])
+                cpu_command.extend(
+                    [
+                        "-c:v",
+                        "libx264",
+                        "-preset",
+                        "medium",
+                        "-crf",
+                        "23",
+                        "-c:a",
+                        "aac",
+                        "-b:a",
+                        "128k",
+                    ]
+                )
             else:
                 cpu_command.extend([
                     '-c:v', 'libx264',
