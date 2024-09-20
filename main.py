@@ -372,7 +372,8 @@ class VideoProcessor(QWidget):
 
         options_layout = QHBoxLayout()
         self.compress_checkbox = QCheckBox("Compress Videos")
-        self.compress_checkbox.setStyleSheet("""
+        self.compress_checkbox.setStyleSheet(
+            """
             QCheckBox {
                 spacing: 5px;
             }
