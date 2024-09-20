@@ -63,8 +63,9 @@ class VideoProcessorThread(QThread):
         total_videos = len(self.videos)
         for index, video in enumerate(self.videos):
             try:
-                self.process_video(video, self.compress, self.trim_values.get(video, None))
-                # Ensure progress reaches 100% for each video
+                self.process_video(
+                    video, self.compress, self.trim_values.get(video, None)
+                )
                 self.progress.emit(100)
                 # If it's not the last video, reset progress for the next video
                 if index < total_videos - 1:
