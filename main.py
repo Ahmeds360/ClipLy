@@ -469,7 +469,9 @@ class VideoProcessor(QWidget):
             self.trim_values[video] = dialog.get_trim_values()
 
     def process_videos(self):
-        videos = [self.video_list.item(i).text() for i in range(self.video_list.count())]
+        videos = [
+            self.video_list.item(i).text() for i in range(self.video_list.count())
+        ]
         if not videos:
             return
 
