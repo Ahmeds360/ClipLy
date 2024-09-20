@@ -438,7 +438,7 @@ class VideoProcessor(QWidget):
         layout.addWidget(self.progress_bar)
 
         self.setLayout(layout)
-        self.setWindowTitle('ClipLy')
+        self.setWindowTitle("ClipLy")
         self.setGeometry(100, 100, 800, 900)
         self.setStyleSheet("""
             QWidget {
