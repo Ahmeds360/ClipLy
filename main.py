@@ -543,7 +543,7 @@ class TrimDialog(QDialog):
         slider.setMaximum(100)
         slider.setTickPosition(QSlider.TicksBelow)
         slider.setTickInterval(10)
-        
+
         label = QLabel(f"{name}: 0:00")
         slider.valueChanged.connect(lambda value, l=label, n=name: l.setText(f"{n}: {self.format_time(value)}"))
         
