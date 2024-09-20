@@ -100,7 +100,7 @@ class VideoProcessorThread(QThread):
             "pipe:1",
             "-nostats",
         ]
-        
+
         if trim:
             start = trim['start']
             end = trim['end']
