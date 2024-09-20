@@ -478,7 +478,9 @@ class VideoProcessor(QWidget):
         self.process_button.setEnabled(False)
         self.process_button.setText("Processing...")
         self.progress_bar.setValue(0)
-        self.thread = VideoProcessorThread(videos, self.compress_checkbox.isChecked(), self.trim_values)
+        self.thread = VideoProcessorThread(
+            videos, self.compress_checkbox.isChecked(), self.trim_values
+        )
         self.thread.finished.connect(self.on_processing_finished)
         self.thread.error.connect(self.on_processing_error)
         self.thread.progress.connect(self.update_progress)
