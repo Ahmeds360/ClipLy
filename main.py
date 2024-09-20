@@ -30,6 +30,7 @@ def get_ffmpeg_path():
         application_path = os.path.dirname(os.path.abspath(__file__))
     return application_path
 
+
 def find_executable(name):
     path = os.path.join(get_ffmpeg_path(), name)
     if os.path.exists(path):
