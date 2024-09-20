@@ -102,8 +102,8 @@ class VideoProcessorThread(QThread):
         ]
 
         if trim:
-            start = trim['start']
-            end = trim['end']
+            start = trim["start"]
+            end = trim["end"]
             duration = end - start
             cuda_command.extend(['-ss', str(start), '-t', str(duration)])
         
