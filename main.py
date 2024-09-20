@@ -256,7 +256,7 @@ class VideoProcessorThread(QThread):
             raise RuntimeError(f"FFprobe failed: {result.stderr}")
 
         output = json.loads(result.stdout)
-        return float(output['format']['duration'])
+        return float(output["format"]["duration"])
 
     def parse_progress(self, line, duration):
         time_match = re.search(r'out_time_ms=(\d+)', line)
