@@ -1,12 +1,25 @@
-# ClipLy
+<h1 align="center">
+  <br>
+  <img src="https://github.com/Ahmeds360/ClipLy/blob/main/logo.png?raw=true" alt="ClipLy Logo" width="200">
+  <br>
+  ClipLy
+  <br>
+</h1>
 
-<img src="https://github.com/Ahmeds360/ClipLy/blob/main/logo.png?raw=true" alt="ClipLy Logo" width="100" height="100">
+<h4 align="center">A powerful and user-friendly video processing tool built with Python and PyQt5.</h4>
 
-ClipLy is a powerful and user-friendly video processing tool built with Python and PyQt5. It allows users to easily trim, compress, and process multiple videos with GPU acceleration.
+<p align="center">
+  <a href="#key-features">Key Features</a> •
+  <a href="#installation">Installation</a> •
+  <a href="#usage">Usage</a> •
+  <a href="#build">Build</a> •
+  <a href="#contributing">Contributing</a> •
+  <a href="#license">License</a>
+</p>
 
 ![ClipLy Demo](https://github.com/Ahmeds360/ClipLy/blob/main/demo.png?raw=true)
 
-## Features
+## Key Features
 
 - **Drag and Drop Interface**: Easily add multiple videos to the processing queue.
 - **Video Trimming**: Trim videos to specific start and end times.
@@ -47,7 +60,16 @@ For Windows users, you can download the pre-built executable:
    python main.py
    ```
 
-## Building from Source
+## Usage
+
+1. Launch ClipLy.
+2. Drag and drop video files into the application or click to select files.
+3. Select videos in the list to trim if desired.
+4. Check the "Compress Videos" option if you want to reduce file size.
+5. Click "Process Videos" to start the operation.
+6. Monitor progress in the progress bar.
+
+## Build
 
 To build the executable yourself:
 
@@ -62,15 +84,6 @@ To build the executable yourself:
    ```
 
    Note: Adjust the paths for ffmpeg.exe and ffprobe.exe according to your system.
-
-## Usage
-
-1. Launch ClipLy.
-2. Drag and drop video files into the application or click to select files.
-3. Select videos in the list to trim if desired.
-4. Check the "Compress Videos" option if you want to reduce file size.
-5. Click "Process Videos" to start the operation.
-6. Monitor progress in the progress bar.
 
 ## Requirements
 
@@ -87,7 +100,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
-[MIT License](LICENSE)
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgements
 
