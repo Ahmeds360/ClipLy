@@ -153,7 +153,7 @@ class VideoProcessorThread(QThread):
             )
 
         cuda_command.append(output)
-        
+
         try:
             process = subprocess.Popen(cuda_command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, universal_newlines=True)
             
