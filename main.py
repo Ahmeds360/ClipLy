@@ -333,7 +333,9 @@ class DragDropBox(QLabel):
         self.parent().add_videos(files)
 
     def mousePressEvent(self, event):
-        files, _ = QFileDialog.getOpenFileNames(self, "Select Videos", "", "Video Files (*.mp4 *.avi *.mov)")
+        files, _ = QFileDialog.getOpenFileNames(
+            self, "Select Videos", "", "Video Files (*.mp4 *.avi *.mov)"
+        )
         if files:
             self.parent().add_videos(files)
 
