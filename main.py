@@ -492,7 +492,9 @@ class VideoProcessor(QWidget):
     def on_processing_finished(self):
         self.process_button.setEnabled(True)
         self.process_button.setText("Process Videos")
-        QMessageBox.information(self, "Processing Complete", "All videos have been processed successfully!")
+        QMessageBox.information(
+            self, "Processing Complete", "All videos have been processed successfully!"
+        )
 
     def on_processing_error(self, error_message):
         self.process_button.setEnabled(True)
