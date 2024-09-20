@@ -86,13 +86,19 @@ class VideoProcessorThread(QThread):
 
         cuda_command = [
             ffmpeg_path,
-            '-hwaccel', 'cuda',
-            '-hwaccel_output_format', 'cuda',
-            '-extra_hw_frames', '3',
-            '-threads', '8',
-            '-i', video,
-            '-progress', 'pipe:1',
-            '-nostats'
+            "-hwaccel",
+            "cuda",
+            "-hwaccel_output_format",
+            "cuda",
+            "-extra_hw_frames",
+            "3",
+            "-threads",
+            "8",
+            "-i",
+            video,
+            "-progress",
+            "pipe:1",
+            "-nostats",
         ]
         
         if trim:
