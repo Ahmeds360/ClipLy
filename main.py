@@ -518,7 +518,7 @@ class TrimDialog(QDialog):
 
         self.start_slider = self.create_slider("Start Time")
         self.end_slider = self.create_slider("End Time")
-        self.end_slider.findChild(QSlider).setValue(100)  # Set end slider to maximum by default
+        self.end_slider.findChild(QSlider).setValue(100)
 
         for slider in [self.start_slider, self.end_slider]:
             layout.addWidget(slider)
