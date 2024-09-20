@@ -565,7 +565,7 @@ class TrimDialog(QDialog):
 
     def get_video_length(self):
         try:
-            ffprobe_path = find_executable('ffprobe.exe')
+            ffprobe_path = find_executable("ffprobe.exe")
             if not ffprobe_path:
                 raise FileNotFoundError("FFprobe not found. Please ensure it's installed and in your PATH.")
 
