@@ -406,7 +406,8 @@ class VideoProcessor(QWidget):
             QPushButton:hover {
                 background-color: #1976D2;
             }
-        """)
+        """
+        )
         self.trim_button.clicked.connect(self.show_trim_dialog)
         options_layout.addWidget(self.trim_button)
 
