@@ -545,8 +545,10 @@ class TrimDialog(QDialog):
         slider.setTickInterval(10)
 
         label = QLabel(f"{name}: 0:00")
-        slider.valueChanged.connect(lambda value, l=label, n=name: l.setText(f"{n}: {self.format_time(value)}"))
-        
+        slider.valueChanged.connect(
+            lambda value, l=label, n=name: l.setText(f"{n}: {self.format_time(value)}")
+        )
+
         container = QWidget()
         container_layout = QVBoxLayout()
         container_layout.addWidget(label)
