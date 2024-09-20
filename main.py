@@ -226,7 +226,9 @@ class VideoProcessorThread(QThread):
 
             process.wait()
             if process.returncode != 0:
-                raise RuntimeError(f"FFmpeg command failed with return code {process.returncode}")
+                raise RuntimeError(
+                    f"FFmpeg command failed with return code {process.returncode}"
+                )
 
         # Ensure progress reaches 100% after processing is complete
         self.progress.emit(100)
