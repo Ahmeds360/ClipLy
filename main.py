@@ -155,8 +155,13 @@ class VideoProcessorThread(QThread):
         cuda_command.append(output)
 
         try:
-            process = subprocess.Popen(cuda_command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, universal_newlines=True)
-            
+            process = subprocess.Popen(
+                cuda_command,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.STDOUT,
+                universal_newlines=True,
+            )
+
             duration = self.get_video_duration(video)
             last_progress = 0
             for line in process.stdout:
