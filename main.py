@@ -446,7 +446,8 @@ class VideoProcessor(QWidget):
                 background-color: #f5f5f5;
                 font-family: Arial, sans-serif;
             }
-        """)
+        """
+        )
 
         self.trim_values = {}
 
